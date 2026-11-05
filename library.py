@@ -2,25 +2,25 @@
 # A simple command-line library tracker.
 
 books = {}  # title -> {"author": str, "available": bool}
+def list_books():
+    if not books:
+        print("No books in the library.")
+        return
+
+    for title, details in books.items():
+        status = "Available" if details["available"] else "Borrowed"
+
+        print(
+            f"{title} by {details['author']} - {status}"
+        )
 
 def show_menu():
     print("\n=== Library Tracker ===")
-    print("0. Exit")
     print("1. Add book")
-
-def add_book():
-    title = input("Title: ")
-    author = input("Author: ")
-
-    if title in books:
-        print(f'"{title}" is already in the library.')
-    else:
-        books[title] = {
-            "author": author,
-            "available": True
-        }
-        print(f'Added "{title}".')
-        
+    print("2. List books")
+    print("3. Borrow book")
+    print("4. Return book")
+    print("0. Exit")
 def main():
     while True:
         show_menu()
@@ -31,6 +31,8 @@ def main():
         elif choice == "0":
             print("Goodbye!")
             break
+        elif choice == "2":
+             list_books()
         else:
             print("Invalid option.")
 

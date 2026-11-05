@@ -1,7 +1,7 @@
 # Library Tracker
 A command-line program for tracking library books.
 ## Features
-- Add books with title and author while preventing duplicates.
+- List all books with their authors and availability status.
 
 ## Contributors
-- Umar Iqbal
+- osama
