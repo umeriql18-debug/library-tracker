@@ -1,4 +1,7 @@
 # Library Tracker
 A command-line program for tracking library books.
-## Features- (none yet)
+## Features
+- List all books with their authors and availability status.
+
 ## Contributors
+- osama
